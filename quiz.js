@@ -31,7 +31,7 @@ var startingScreen = function(){
 	
 	//HIGHSCORE and TIMER needs to be formatted to be on the same line
 	highScore.innerHTML = "High Score"
-	countdownAREA.innerHTML = "Total time: "+ countdownSeconds + " seconds";
+	countdownAREA.innerHTML = "Total: "+ countdownSeconds + " seconds";
 	
 	
 	start.innerHTML ="<h1><center>" + "Coding Quiz Challenge" + "</center></h1>";
@@ -46,7 +46,7 @@ var startingScreen = function(){
 	body.appendChild(startBtn);
     
 	
-	startBtn.addEventListener("click", clearInstructionsThenQ1); 	
+	startBtn.addEventListener("click", clearInstructions_then_Q1); 	
 }  
 
 //Countdown timer function
@@ -84,7 +84,7 @@ function countDownTimer() {
   
   
 
-var clearInstructionsThenQ1 = function() {
+var clearInstructions_then_Q1 = function() {
 	console.log("CLEAR INSTRUCTIONS THEN Q1");
     start.innerHTML="";
 	startBtn.outerHTML="";
@@ -159,7 +159,7 @@ var secondQuestion = function()
     }
 )
 
-	start.innerHTML ="<br><hr> Q1 Result: " + Q1Result;
+	start.innerHTML ="<br><hr> Question One Result: " + Q1Result;
     body.appendChild(start);
 }
 
@@ -195,7 +195,7 @@ var thirdQuestion = function()
     }
 )
 
-	start.innerHTML ="<br><hr> Q2 Result: " + Q2Result;
+	start.innerHTML ="<br><hr> Question Two Result: " + Q2Result;
     body.appendChild(start);
 } 
 
@@ -228,7 +228,7 @@ var fourthQuestion = function()
 	else{}
     }
 )
-	start.innerHTML ="<br><hr> Q3 Result: " + Q3Result;
+	start.innerHTML ="<br><hr> Question Three Result: " + Q3Result;
     body.appendChild(start);
 } 
 
@@ -262,7 +262,7 @@ var fifthQuestion = function()
 	else{}
     }
 )
-	start.innerHTML ="<br><hr> Q4 Result: " + Q4Result;
+	start.innerHTML ="<br><hr> Question Four Result: " + Q4Result;
     body.appendChild(start);
 } 
 
@@ -270,7 +270,7 @@ var fifthQuestion = function()
 
 var Q1Ans1 = function()
 {
-	localStorage.setItem('Q1result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q1result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q1Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q1Result=localStorage.getItem('Q1result')
@@ -283,7 +283,7 @@ var Q1Ans1 = function()
 }
 var Q1Ans2 = function()
 {
-	localStorage.setItem('Q1result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q1result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q1Ans2");
 	countdownSeconds=countdownSeconds-10;
 	Q1Result=localStorage.getItem('Q1result')
@@ -304,7 +304,7 @@ var Q1Ans3 = function()
 }
 var Q1Ans4 = function()
 {
-	localStorage.setItem('Q1result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q1result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q1Ans4");
 	countdownSeconds=countdownSeconds-10;
 	Q1Result=localStorage.getItem('Q1result')
@@ -317,7 +317,7 @@ var Q1Ans4 = function()
 
 var Q2Ans1 = function()
 {
-	localStorage.setItem('Q2result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q2result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q2Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q2Result=localStorage.getItem('Q2result')
@@ -328,7 +328,7 @@ var Q2Ans1 = function()
 
 var Q2Ans2 = function()
 {
-	localStorage.setItem('Q2result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q2result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q2Ans2");
 	countdownSeconds=countdownSeconds-10;
 	Q2Result=localStorage.getItem('Q2result')
@@ -349,7 +349,7 @@ var Q2Ans3 = function()
 
 var Q2Ans4 = function()
 {
-	localStorage.setItem('Q2result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q2result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q2Ans4");
 	countdownSeconds=countdownSeconds-10;
 	Q2Result=localStorage.getItem('Q2result')
@@ -362,7 +362,7 @@ var Q2Ans4 = function()
 
 var Q3Ans1 = function()
 {
-	localStorage.setItem('Q3result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q3result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q3Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q3Result=localStorage.getItem('Q3result')	
@@ -373,7 +373,7 @@ var Q3Ans1 = function()
 
 var Q3Ans2 = function()
 {
-	localStorage.setItem('Q3result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q3result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q3Ans2");
 	countdownSeconds=countdownSeconds-10;
 	Q3Result=localStorage.getItem('Q3result')
@@ -384,7 +384,7 @@ var Q3Ans2 = function()
 
 var Q3Ans3 = function()
 {   
-    localStorage.setItem('Q3result', "Wrong! Lose 10 seconds.");
+    localStorage.setItem('Q3result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q3Ans3");
 	countdownSeconds=countdownSeconds-10;
 	Q3Result=localStorage.getItem('Q3result')
@@ -407,7 +407,7 @@ var Q3Ans4 = function()
 
 var Q4Ans1 = function()
 {
-	localStorage.setItem('Q4result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q4result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q4Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q4Result=localStorage.getItem('Q4result')		
@@ -418,7 +418,7 @@ var Q4Ans1 = function()
 
 var Q4Ans2 = function()
 {
-	localStorage.setItem('Q4result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q4result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q4Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q4Result=localStorage.getItem('Q4result')
@@ -439,7 +439,7 @@ var Q4Ans3 = function()
 
 var Q4Ans4 = function()
 {
-	localStorage.setItem('Q4result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q4result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q4Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q4Result=localStorage.getItem('Q4result')
@@ -452,7 +452,7 @@ var Q4Ans4 = function()
 
 var Q5Ans1 = function()
 {
-	localStorage.setItem('Q5result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q5result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q5Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q5Result=localStorage.getItem('Q5result')	
@@ -462,7 +462,7 @@ var Q5Ans1 = function()
 
 var Q5Ans2 = function()
 {
-	localStorage.setItem('Q5result', "Wrong! Lose 10 seconds.");
+	localStorage.setItem('Q5result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q5Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q5Result=localStorage.getItem('Q5result')
@@ -471,7 +471,7 @@ var Q5Ans2 = function()
 
 var Q5Ans3 = function()
 {   
-    localStorage.setItem('Q5result', "Wrong! Lose 10 seconds.");
+    localStorage.setItem('Q5result', "WRONG! Lose 10 seconds.");
 	console.log("hey Q5Ans1");
 	countdownSeconds=countdownSeconds-10;
 	Q5Result=localStorage.getItem('Q5result')
@@ -501,11 +501,11 @@ var finalScorePage = function()
         if (Q4Result === 'CORRECT!') {score += 5; console.log(score)};		
         if (Q5Result === 'CORRECT!') {score += 5; console.log(score)};		
 
-		if (Q1Result === 'Wrong! Lose 10 SECONDS') {score -= 5; console.log(score)};		
-        if (Q2Result === 'Wrong! Lose 10 SECONDS') {score -= 5; console.log(score)};		
-        if (Q3Result === 'Wrong! Lose 10 SECONDS') {score -= 5; console.log(score)};		
-        if (Q4Result === 'Wrong! Lose 10 SECONDS') {score -= 5; console.log(score)};		
-        if (Q5Result === 'Wrong! Lose 10 SECONDS') {score -= 5; console.log(score)};		
+		if (Q1Result === 'WRONG! Lose 10 seconds.') {score -= 5; console.log(score)};		
+        if (Q2Result === 'WRONG! Lose 10 seconds.') {score -= 5; console.log(score)};		
+        if (Q3Result === 'WRONG! Lose 10 seconds.') {score -= 5; console.log(score)};		
+        if (Q4Result === 'WRONG! Lose 10 seconds.') {score -= 5; console.log(score)};		
+        if (Q5Result === 'WRONG! Lose 10 seconds.') {score -= 5; console.log(score)};		
 	
 	finalScore = document.createElement("div");
     finalScore.innerHTML ="<center>" + "<h1>All done!</h1>" + "<h4>Your final score is " + score + ". </h4></center>";
@@ -530,7 +530,7 @@ var finalScorePage = function()
 		initialsContainer.appendChild(initialsBtn);
 		body.appendChild(initialsContainer);
 
-	start.innerHTML ="<br><hr> Q5 Result: " + Q5Result;
+	start.innerHTML ="<br><hr> Question Five Result: " + Q5Result;
     body.appendChild(start);
 
 	initialsBtn.addEventListener("click", function() {
@@ -588,7 +588,8 @@ var lastPage = function()
 		}		
 	}
 	//If viewing score list without starting the quiz: 
-    	if (typeof(Storage) !== "undefined" && initials === "" && score === "") {		
+    	if (typeof(Storage) !== "undefined" && initials === "" && score === "") {
+		
 		let highScoreData = JSON.parse(localStorage.getItem("scoreArray") || '[]');
         
 		highScoreData.sort((a, b) => b.number - a.number);
