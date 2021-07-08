@@ -31,11 +31,11 @@ var startingScreen = function(){
 	
 	//HIGHSCORE and TIMER needs to be formatted to be on the same line
 	highScore.innerHTML = "High Score"
-	countdownAREA.innerHTML = "Total: "+ countdownSeconds + " seconds";
+	countdownAREA.innerHTML = "Time limit: "+ countdownSeconds + " seconds";
 	
 	
 	start.innerHTML ="<h1><center>" + "Coding Quiz Challenge" + "</center></h1>";
-	start.innerHTML +="<h4><center><p>" + "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!" + "</p></center></h3>";
+	start.innerHTML +="<h4><center><p>" + "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!" + "</p></center></h4>";
 	start.id= "startIdEd";
 	body.appendChild(start);
 
@@ -72,7 +72,7 @@ function countDownTimer() {
 		}
 	
 	    if (countdownSeconds > 1){
-		console.log("TIME LEFT: " + countdownSeconds);
+		console.log("Time left: " + countdownSeconds);
 		countdownAREA.innerHTML = "Time left: "+ countdownSeconds + " seconds";
 	    countdownSeconds--;
 		}
@@ -159,14 +159,12 @@ var secondQuestion = function()
     }
 )
 
-	start.innerHTML ="<br><hr> Question One Result: " + Q1Result;
+	start.innerHTML ="<br><hr> Q1 Result: " + Q1Result;
     body.appendChild(start);
 }
 
 var thirdQuestion = function() 
-{
- 
-  
+{  
     questionArea.innerHTML ="<h1><center>" + "<i>Q3.</i>Arrays in JavaScript can be used to store ________." + "</center></h1>";
 
     var Answers = ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"];
@@ -195,7 +193,7 @@ var thirdQuestion = function()
     }
 )
 
-	start.innerHTML ="<br><hr> Question Two Result: " + Q2Result;
+	start.innerHTML ="<br><hr> Q2 Result: " + Q2Result;
     body.appendChild(start);
 } 
 
@@ -228,7 +226,7 @@ var fourthQuestion = function()
 	else{}
     }
 )
-	start.innerHTML ="<br><hr> Question Three Result: " + Q3Result;
+	start.innerHTML ="<br><hr> Q3 Result: " + Q3Result;
     body.appendChild(start);
 } 
 
@@ -262,7 +260,7 @@ var fifthQuestion = function()
 	else{}
     }
 )
-	start.innerHTML ="<br><hr> Question Four Result: " + Q4Result;
+	start.innerHTML ="<br><hr> Q4 Result: " + Q4Result;
     body.appendChild(start);
 } 
 
@@ -530,7 +528,7 @@ var finalScorePage = function()
 		initialsContainer.appendChild(initialsBtn);
 		body.appendChild(initialsContainer);
 
-	start.innerHTML ="<br><hr> Question Five Result: " + Q5Result;
+	start.innerHTML ="<br><hr> Q5 Result: " + Q5Result;
     body.appendChild(start);
 
 	initialsBtn.addEventListener("click", function() {

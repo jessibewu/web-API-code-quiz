@@ -33,6 +33,13 @@ h1{
   margin: 30px auto;
   font-size: 28px;
   color: rgb(0, 0, 0);
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+p {
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 h4{
@@ -51,11 +58,11 @@ h4{
   flex-direction: column;
 }
 
-
 .theButtonIdClass {
   align-items: center;
   text-align: left;
   display: flex;
+  padding-left: 15px;
 }
 
 button {
