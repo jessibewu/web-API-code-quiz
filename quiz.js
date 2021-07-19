@@ -28,7 +28,11 @@ var startingScreen = function(){
 	countdownSeconds = 75; 
 	initials = "";
 	score = "";
-	
+var results = ["Q1result", "Q2result", "Q3result", "Q4result", "Q5result"];
+	for (key of results) {
+	localStorage.removeItem(key);
+}
+
 	//HIGHSCORE and TIMER needs to be formatted to be on the same line
 	highScore.innerHTML = "High Score"
 	countdownAREA.innerHTML = "Time limit: "+ countdownSeconds + " seconds";
@@ -56,7 +60,7 @@ function countDownTimer() {
 	{    
 		if (countdownSeconds <= 0)
 		{
-		countdownAREA.innerHTML = "Time ended! Game over!"; 
+		countdownAREA.innerHTML = "Time ended! Try again!"; 
 		clearInterval(downingSecondsInterval);
 		finalScorePage();
 	
@@ -79,10 +83,7 @@ function countDownTimer() {
 		
 		
 	 }, 1000); 
-	
 }
-  
-  
 
 var clearInstructions_then_Q1 = function() {
 	console.log("CLEAR INSTRUCTIONS THEN Q1");
@@ -165,7 +166,7 @@ var secondQuestion = function()
 
 var thirdQuestion = function() 
 {  
-    questionArea.innerHTML ="<h1><center>" + "<i>Q3.</i>Arrays in JavaScript can be used to store ________." + "</center></h1>";
+    questionArea.innerHTML ="<h1><center>" + "<i>Q3.</i>Arrays in JavaScript can be used to store _____." + "</center></h1>";
 
     var Answers = ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"];
 	
@@ -199,7 +200,7 @@ var thirdQuestion = function()
 
 var fourthQuestion = function() 
 {
-    questionArea.innerHTML ="<h1><center>" + "<i>Q4.</i>String values must be enclosed within _______ when being assigned to variables." + "</center></h1>";
+    questionArea.innerHTML ="<h1><center>" + "<i>Q4.</i>String values must be enclosed within _____ when being assigned to variables." + "</center></h1>";
 
     var Answers = ["1. commas", "2. curly brackets", "3. quotes", "4. parenthesis"];
 	
@@ -510,7 +511,7 @@ var finalScorePage = function()
     body.appendChild(finalScore);
     
 	var initialsContainer = document.createElement('div');
-		initialsContainer.setAttribute("style", "display:flex; justify-content: space-around; margin-bottom: 10px; align-item: center;")
+		initialsContainer.setAttribute("style", "display:flex; justify-content: space-evenly; margin-bottom: 10px; align-item: center;")
 
 		initialsText = document.createElement('h3')
 		initialsText.textContent = ("Enter initials: ");
@@ -560,7 +561,7 @@ var lastPage = function()
     body.appendChild(lastPageText);
 	
 		scores.style.backgroundColor = "rgb(204, 215, 235)";
-		scores.style.width = "70%";
+		scores.style.width = "40%";
 		scores.style.minHeight = "30px";
 		scores.style.margin = "10px auto";
 
@@ -638,7 +639,7 @@ var clearHighScores = function()
 
 var clearHighScorePageElements = function()
 {   
-    //Clear out all displayed Highscores. This ensures that in the event the GO Back button is used to reDO the test, the Highscores list WOULD not display both the SCORE list previously and the NEW updated Score list 
+    //Clear out all displayed Highscores. This ensures that in the event the GO Back button is used to redo the test, the Highscores list WOULD not display both the SCORE list previously and the NEW updated Score list 
 	//[2 List of Highscores on doing the test twice. [3 List of Highscores on doing the test three times. and so on...
 	scores.textContent="";
 	
